@@ -84,28 +84,45 @@ typing();
 // FORM VALIDATION
 
 const form = document.getElementById("formContato");
+const sucesso = document.getElementById("sucesso");
 
-if(form){
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-form.addEventListener("submit", function(e){
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-e.preventDefault();
+    // Validação simples
+    if (nome === "" || email === "" || mensagem === "") {
+      alert("Preencha todos os campos obrigatórios");
+      return;
+    }
 
-const nome = document.getElementById("nome").value.trim();
-const email = document.getElementById("email").value.trim();
+    // Envia para FormSubmit
+    form.submit();
 
-if(nome === "" || email === ""){
-alert("Preencha os campos obrigatórios");
-return;
+    // Feedback visual
+    setTimeout(() => {
+      form.reset();
+      sucesso.classList.add("show");
+
+      setTimeout(() => {
+        sucesso.classList.remove("show");
+      }, 4000);
+    }, 500);
+  });
 }
 
-alert("Mensagem enviada com sucesso!");
-
-form.reset();
-
+// Scroll suave para links internos
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
-
-}
 
 // 3D CARD EFFECT
 

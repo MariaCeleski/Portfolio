@@ -14,9 +14,8 @@ Um portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e 
 - **JavaScript**  
 
 ## 📸 Demonstração
-Adicione aqui uma imagem ou GIF mostrando o site em funcionamento.  
-Exemplo:  
-![Screenshot do Portfolio](assets/screenshot.png)
+ 
+🎥 [Assista à demonstração no YouTube](https://youtu.be/ewAVAAvwIcY)
 
 ## 🚀 Como executar
 1. Clone este repositório:

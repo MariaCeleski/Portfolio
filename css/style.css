@@ -419,32 +419,69 @@ PROJECTS
 FORM
 ========================= */
 
+/* ========================= FORM STYLE PRO ========================= */
 form {
+  max-width: 600px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 18px;
 }
 
-input,
+input, textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
+  transform: scale(1.02);
+}
+
 textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
+  min-height: 120px;
+  resize: none;
 }
 
 button {
-  padding: 12px;
   background: #38bdf8;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 14px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
+
+/* mensagem de sucesso */
+.sucesso {
+  opacity: 0;
+  text-align: center;
+  margin-top: 10px;
+  color: #22c55e;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.sucesso.show {
+  opacity: 1;
 }
 
 /* =========================
@@ -466,6 +503,28 @@ DOWNLOAD CV BUTTON
 .btn-cv:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Botão CV */
+.btn-cv {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #96dbaf;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-cv:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
 
 /* =========================
