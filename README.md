@@ -1,27 +1,24 @@
-# 🌐 Portfólio - Maria Celeski
+# 🌐 Portfolio
 
-Landing page desenvolvida para apresentar projetos e habilidades na área de desenvolvimento de software.
+Um portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e experiências de forma clara e visual.
 
-## 🚀 Tecnologias
+## ✨ Funcionalidades
+- Página inicial com apresentação pessoal  
+- Seções para projetos, habilidades e contato  
+- Layout responsivo para desktop e mobile  
+- Navegação simples e intuitiva  
 
-- HTML
-- CSS
-- JavaScript
+## 🛠️ Tecnologias utilizadas
+- **HTML5**  
+- **CSS3**  
+- **JavaScript**  
 
-## 📂 Estrutura
+## 📸 Demonstração
+Adicione aqui uma imagem ou GIF mostrando o site em funcionamento.  
+Exemplo:  
+![Screenshot do Portfolio](assets/screenshot.png)
 
-index.html  
-style.css  
-script.js  
-assets/
-
-## 💻 Funcionalidades
-
-- Layout responsivo
-- Seção de projetos
-- Validação de formulário
-- Navegação por seções
-
-## 🌍 Deploy
-
-Projeto publicado com GitHub Pages.
+## 🚀 Como executar
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seuusuario/portfolio.git

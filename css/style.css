@@ -397,6 +397,24 @@ PROJECTS
   color: #38bdf8;
 }
 
+.btn-github {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #24292e; /* cor do GitHub */
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-github:hover {
+      background-color: #444c56; /* cor mais clara ao passar o mouse */
+    }
+
+
+
+
 /* =========================
 FORM
 ========================= */
