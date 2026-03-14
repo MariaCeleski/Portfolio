@@ -1,0 +1,502 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+HERO SECTION 
+========================= */
+
+.hero {
+  max-width: 900px;
+  margin: auto;
+  padding: 120px 20px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* garante centralização vertical se necessário */
+  gap: 25px;
+
+
+}
+
+/* =========================
+AVATAR
+========================= */
+
+.avatar {
+  max-width: 100%;
+  height: auto;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 70%; 
+  object-fit: cover;  
+  border: 3px solid #009688; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  display: block;       /* evita comportamento inline */
+  margin: 0 auto;       /* força centralização dentro do container */
+
+}
+
+
+/* =========================
+TÍITULO DIGITANDO
+========================= */
+
+#typing {
+  font-size: 36px;
+  font-weight: 600;
+  min-height: 45px;
+}
+
+/* =========================
+TEXTO HERO
+========================= */
+
+.hero p {
+  max-width: 650px;
+  line-height: 1.7;
+  font-size: 18px;
+  color: #cbd5f5;
+}
+
+/* =========================
+LINKS SOCIAIS
+========================= */
+.social {
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+  
+}
+
+.social a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #38bdf8;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+
+.sobre {
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sobre h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 36px;
+}
+
+ 
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: white;
+}
+ 
+
+/* =========================
+BODY / BACKGROUND
+========================= */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(-45deg, #3e4c6e, #020617, #1e293b, #020617);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  color: white;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+CURSOR PISCANDO
+========================= */
+
+#typing::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* =========================
+PARTICLES BACKGROUND
+========================= */
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #0f172a;
+}
+
+/* =========================
+HEADER / NAVBAR
+========================= */
+
+header {
+  background: #020617;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+HAMBURGER MENU
+========================= */
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.avatar {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+}
+
+.avatar:hover {
+  transform: scale(1.7); /* efeito de zoom */
+  box-shadow: 0 6px 25px rgba(56, 189, 248, 0.8); /* sombra mais intensa */
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff00cc, #3333ff);
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social a.github {
+  background: linear-gradient(135deg, #444, #ff00cc);
+}
+
+.social a.linkedin {
+  background: linear-gradient(135deg, #0077b5, #00ffcc);
+}
+
+.social a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.7),
+              0 0 40px rgba(51, 51, 255, 0.6);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* =========================
+SECTIONS
+========================= */
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/*=========================
+SKILLS
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skills-grid div {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skills-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skills-grid i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill i {
+  font-size: 40px;
+  color: #38bdf8;
+}
+
+/* =========================
+PROJECTS
+========================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  perspective: 1000px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 16px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+.card img {
+  width: 180px;              /* tamanho fixo da imagem */
+  height: auto;              /* mantém proporção */
+  display: block;            /* evita comportamento inline */
+  margin: 0 auto 15px auto;  /* centraliza horizontalmente e dá espaço abaixo */
+  border-radius: 12px;       /* bordas arredondadas */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra suave */
+  transition: transform 0.3s ease; /* animação ao passar o mouse */
+}
+
+.card img:hover {
+  transform: scale(1.1);     /* efeito de zoom ao passar o mouse */
+}
+
+.card h3 {
+  transform: translateZ(25px);
+}
+
+.card p {
+  transform: translateZ(20px);
+}
+
+.card span {
+  transform: translateZ(15px);
+}
+
+.card a {
+  display: block;
+  margin-top: 10px;
+  color: #38bdf8;
+}
+
+/* =========================
+FORM
+========================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+DOWNLOAD CV BUTTON
+========================= */
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #38bdf8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  margin-top: 40px;
+}
+
+/* =========================
+SCROLL ANIMATION
+========================= */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #020617;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
