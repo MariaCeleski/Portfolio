@@ -17,6 +17,13 @@ Um portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e 
  
 🎥 [Assista à demonstração no YouTube](https://youtu.be/ewAVAAvwIcY)
 
+
+## 📸 Demonstração
+ 
+🎥 [Veja meu portfólio na página web](https://mariaceleski.github.io/Portfolio/)
+
+
+
 ## 🚀 Como executar
 1. Clone este repositório:
    ```bash

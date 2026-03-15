@@ -1,0 +1,23 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main   # dispara quando você faz push na branch main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      # Se não há build, apenas publica os arquivos
+      - name: Upload para Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .   # raiz do repositório, onde está seu index.html
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
